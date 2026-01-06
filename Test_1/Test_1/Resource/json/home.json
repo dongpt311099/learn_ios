@@ -1,0 +1,110 @@
+[
+  {
+    "id": "18",
+    "name": "trending_title",
+    "icon_title": "ic_category_title_4",
+    "icon": "ic_category_18"
+  },
+  {
+    "id": "17",
+    "name": "meme",
+    "icon_title": "ic_category_title_17",
+    "icon": "ic_category_17"
+  },
+  {
+    "id": "1",
+    "name": "hair_clipper_cate",
+    "icon_title": "ic_category_title_1",
+    "icon": "ic_category_1"
+  },
+  {
+    "id": "2",
+    "name": "air_horn_cate",
+    "icon_title": "ic_category_title_2",
+    "icon": "ic_category_2"
+  },
+  {
+    "id": "15",
+    "name": "crack_screen",
+    "icon_title": "ic_category_title_15",
+    "icon": "ic_category_15"
+  },
+  {
+    "id": "16",
+    "name": "bug_camera",
+    "icon_title": "ic_category_title_16",
+    "icon": "ic_category_16"
+  },
+  {
+    "id": "3",
+    "name": "door_bell_cate",
+    "icon_title": "ic_category_title_3",
+    "icon": "ic_category_3"
+  },
+  {
+    "id": "4",
+    "name": "funny_police",
+    "icon_title": "ic_category_title_4",
+    "icon": "ic_category_4"
+  },
+  {
+    "id": "5",
+    "name": "gun",
+    "icon_title": "ic_category_title_5",
+    "icon": "ic_category_5"
+  },
+  {
+    "id": "6",
+    "name": "sleight_bell",
+    "icon_title": "ic_category_title_6",
+    "icon": "ic_category_6"
+  },
+  {
+    "id": "7",
+    "name": "scary",
+    "icon_title": "ic_category_title_7",
+    "icon": "ic_category_7"
+  },
+  {
+    "id": "8",
+    "name": "animal_sounds",
+    "icon_title": "ic_category_title_8",
+    "icon": "ic_category_8"
+  },
+  {
+    "id": "9",
+    "name": "pottery_break",
+    "icon_title": "ic_category_title_9",
+    "icon": "ic_category_9"
+  },
+  {
+    "id": "10",
+    "name": "dryer",
+    "icon_title": "ic_category_title_10",
+    "icon": "ic_category_10"
+  },
+  {
+    "id": "11",
+    "name": "electricity",
+    "icon_title": "ic_category_title_11",
+    "icon": "ic_category_11"
+  },
+  {
+    "id": "12",
+    "name": "fart",
+    "icon_title": "ic_category_title_12",
+    "icon": "ic_category_12"
+  },
+  {
+    "id": "13",
+    "name": "ghost",
+    "icon_title": "ic_category_title_13",
+    "icon": "ic_category_13"
+  },
+  {
+    "id": "14",
+    "name": "toilet",
+    "icon_title": "ic_category_title_14",
+    "icon": "ic_category_14"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "name": "gun 1",
+    "sound": "gun_1",
+    "icon": "ic_category_501"
+  },
+  {
+    "name": "gun 2",
+    "sound": "gun_2",
+    "icon": "ic_category_502"
+  },
+  {"name": "gun 3",
+    "sound": "gun_3",
+    "icon": "ic_category_503"
+  },
+  {
+    "name": "gun 4",
+    "sound": "gun_4",
+    "icon": "ic_category_504"
+  },
+  {
+    "name": "gun 5",
+    "sound": "gun_5",
+    "icon": "ic_category_505"
+  },
+  {
+    "name": "gun 6",
+    "sound": "gun_6",
+    "icon": "ic_category_506"
+  },
+  {
+    "name": "gun 7",
+    "sound": "gun_7",
+    "icon": "ic_category_507"
+  },
+  {
+    "name": "gun 8",
+    "sound": "gun_8",
+    "icon": "ic_category_508"
+  },
+  {
+    "name": "gun 9",
+    "sound": "gun_9",
+    "icon": "ic_category_509"
+  },
+  {
+    "name": "gun 10",
+    "sound": "gun_10",
+    "icon": "ic_category_510"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Clay Crush",
+    "sound": "pottery_break_1",
+    "icon": "ic_category_901"
+  },
+  {
+    "name": "Pot Bust",
+    "sound": "pottery_break_2",
+    "icon": "ic_category_902"
+  },
+  {
+    "name": "Pottery Crunch",
+    "sound": "pottery_break_3",
+    "icon": "ic_category_903"
+  },
+  {
+    "name": "Clay Crack",
+    "sound": "pottery_break_4",
+    "icon": "ic_category_904"
+  },
+  {
+    "name": "Vase Crush",
+    "sound": "pottery_break_5",
+    "icon": "ic_category_905"
+  },
+  {
+    "name": "Pot Shatter",
+    "sound": "pottery_break_6",
+    "icon": "ic_category_906"
+  },
+  {
+    "name": "Glass Crack",
+    "sound": "pottery_break_7",
+    "icon": "ic_category_907"
+  }
+]

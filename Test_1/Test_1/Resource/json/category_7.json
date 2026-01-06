@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Shadow Howl",
+    "sound": "scary_1",
+    "icon": "ic_category_701"
+  },
+  {
+    "name": "Night Scream",
+    "sound": "scary_2",
+    "icon": "ic_category_702"
+  },
+  {
+    "name": "Ghost Cry",
+    "sound": "scary_3",
+    "icon": "ic_category_703"
+  },
+  {
+    "name": "Ghoul Moan",
+    "sound": "scary_4",
+    "icon": "ic_category_704"
+  },
+  {
+    "name": "Banshee Wail",
+    "sound": "scary_5",
+    "icon": "ic_category_705"
+  },
+  {
+    "name": "Fear Screech",
+    "sound": "scary_6",
+    "icon": "ic_category_706"
+  },
+  {
+    "name": "Creep Howl",
+    "sound": "scary_7",
+    "icon": "ic_category_707"
+  },
+  {
+    "name": "Dark Roar",
+    "sound": "scary_8",
+    "icon": "ic_category_708"
+  },
+  {
+    "name": "Eerie Scream",
+    "sound": "scary_9",
+    "icon": "ic_category_709"
+  },
+  {
+    "name": "Wraith Moan",
+    "sound": "scary_10",
+    "icon": "ic_category_710"
+  },
+  {
+    "name": "Terror Scream",
+    "sound": "scary_11",
+    "icon": "ic_category_711"
+  },
+  {
+    "name": "Spook Wail",
+    "sound": "scary_12",
+    "icon": "ic_category_712"
+  },
+  {
+    "name": "Haunt Howl",
+    "sound": "scary_13",
+    "icon": "ic_category_713"
+  },
+  {
+    "name": "Chill Scream",
+    "sound": "scary_14",
+    "icon": "ic_category_714"
+  },
+  {
+    "name": "Dread Moan",
+    "sound": "scary_15",
+    "icon": "ic_category_715"
+  }
+]

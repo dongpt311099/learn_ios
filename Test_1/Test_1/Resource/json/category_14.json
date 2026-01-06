@@ -1,0 +1,22 @@
+[
+  {
+    "name": "toilet 1",
+    "sound": "toilet_1",
+    "icon": "ic_category_1401"
+  },
+  {
+    "name": "toilet 2",
+    "sound": "toilet_1",
+    "icon": "ic_category_1402"
+  },
+  {
+    "name": "toilet 3",
+    "sound": "toilet_1",
+    "icon": "ic_category_1403"
+  },
+  {
+    "name": "toilet 4",
+    "sound": "toilet_1",
+    "icon": "ic_category_1404"
+  }
+]

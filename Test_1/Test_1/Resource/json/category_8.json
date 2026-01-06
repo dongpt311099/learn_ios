@@ -1,0 +1,72 @@
+[
+  {
+    "name": "mosquito",
+    "sound": "animal_sound1",
+    "icon": "ic_category_81"
+  },
+  {
+    "name": "tiger",
+    "sound": "animal_sound2",
+    "icon": "ic_category_82"
+  },
+  {
+    "name": "monkey",
+    "sound": "animal_sound3",
+    "icon": "ic_category_83"
+  },
+  {
+    "name": "mouse",
+    "sound": "animal_sound4",
+    "icon": "ic_category_84"
+  },
+  {
+    "name": "cricket",
+    "sound": "animal_sound5",
+    "icon": "ic_category_85"
+  },
+  {
+    "name": "chicken",
+    "sound": "animal_sound6",
+    "icon": "ic_category_86"
+  },
+  {
+    "name": "dog",
+    "sound": "animal_sound7",
+    "icon": "ic_category_87"
+  },
+  {
+    "name": "cat",
+    "sound": "animal_sound8",
+    "icon": "ic_category_88"
+  },
+  {
+    "name": "wolves",
+    "sound": "animal_sound9",
+    "icon": "ic_category_89"
+  },
+  {
+    "name": "bird",
+    "sound": "animal_sound10",
+    "icon": "ic_category_810"
+  },
+  {
+    "name": "duck",
+    "sound": "animal_sound11",
+    "icon": "ic_category_811"
+  },
+  {
+    "name": "frog",
+    "sound": "animal_sound12",
+    "icon": "ic_category_812"
+  },
+  {
+    "name": "horse",
+    "sound": "animal_sound13",
+    "icon": "ic_category_813"
+  },
+  {
+    "name": "pig",
+    "sound": "animal_sound14",
+    "icon": "ic_category_814"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Bell Chime",
+    "sound": "funny_doorbell_1",
+    "icon": "ic_category_301"
+  },
+  {
+    "name": "Ring Bell",
+    "sound": "funny_doorbell_2",
+    "icon": "ic_category_302"
+  },
+  {"name": "Ding Dong",
+    "sound": "funny_doorbell_3",
+    "icon": "ic_category_303"
+  },
+  {
+    "name": "Sound Bell",
+    "sound": "funny_doorbell_4",
+    "icon": "ic_category_304"
+  },
+  {
+    "name": "Echo Bell",
+    "sound": "funny_doorbell_5",
+    "icon": "ic_category_305"
+  },
+  {
+    "name": "Chime Box",
+    "sound": "funny_doorbell_6",
+    "icon": "ic_category_306"
+  },
+  {
+    "name": "Melo Bell",
+    "sound": "funny_doorbell_7",
+    "icon": "ic_category_307"
+  },
+  {
+    "name": "Tone Bell",
+    "sound": "funny_doorbell_8",
+    "icon": "ic_category_308"
+  },
+  {
+    "name": "Echo Chime",
+    "sound": "funny_doorbell_9",
+    "icon": "ic_category_309"
+  },
+  {
+    "name": "Pulse Chime",
+    "sound": "funny_doorbell_10",
+    "icon": "ic_category_310"
+  }
+]

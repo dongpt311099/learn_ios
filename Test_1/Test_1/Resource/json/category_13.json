@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Specter",
+    "sound": "ghost_1",
+    "icon": "ic_category_1301"
+  },
+  {
+    "name": "Specter",
+    "sound": "ghost_2",
+    "icon": "ic_category_1302"
+  },
+  {
+    "name": "Apparition",
+    "sound": "ghost_3",
+    "icon": "ic_category_1303"
+  },
+  {
+    "name": "Spirit",
+    "sound": "ghost_4",
+    "icon": "ic_category_1304"
+  },
+  {
+    "name": "Wraith",
+    "sound": "ghost_5",
+    "icon": "ic_category_1305"
+  },
+  {
+    "name": "Shade",
+    "sound": "ghost_6",
+    "icon": "ic_category_1306"
+  },
+  {
+    "name": "Haunt",
+    "sound": "ghost_7",
+    "icon": "ic_category_1307"
+  },
+  {
+    "name": "Banshee",
+    "sound": "ghost_8",
+    "icon": "ic_category_1308"
+  },
+  {
+    "name": "Poltergeist",
+    "sound": "ghost_9",
+    "icon": "ic_category_1309"
+  },
+  {
+    "name": "Spook",
+    "sound": "ghost_10",
+    "icon": "ic_category_1310"
+  },
+  {
+    "name": "Wisp",
+    "sound": "ghost_11",
+    "icon": "ic_category_1311"
+  },
+  {
+    "name": "Phantom",
+    "sound": "ghost_12",
+    "icon": "ic_category_1312"
+  },
+  {
+    "name": "Specter",
+    "sound": "ghost_13",
+    "icon": "ic_category_1313"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Toilet Monster",
+    "sound": "trending_1",
+    "icon": "ic_category_1801"
+  },
+  {
+    "name": "Santa Prank",
+    "sound": "trending_2",
+    "icon": "ic_category_1802"
+  },
+  {
+    "name": "Bruhh",
+    "sound": "meme_1",
+    "icon": "ic_category_1701"
+  },
+  {
+    "name": "Swift Clip",
+    "sound": "hair_trimmer_1",
+    "icon": "ic_category_101"
+  },
+  {
+    "name": "Aero Blast",
+    "sound": "funny_airhorn_1",
+    "icon": "ic_category_201"
+  },
+  {
+    "name": "Itunes",
+    "sound": "crack_screen1",
+    "icon": "ic_category_151"
+  },
+  {
+    "name": "Cockroaches",
+    "sound": "bug_1",
+    "icon": "ic_category_161"
+  },
+  {
+    "name": "Bell Chime",
+    "sound": "funny_doorbell_1",
+    "icon": "ic_category_301"
+  },
+  {
+    "name": "gun 1",
+    "sound": "gun_1",
+    "icon": "ic_category_501"
+  },
+  {
+    "name": "Frost Chime",
+    "sound": "sleigh_bells_1",
+    "icon": "ic_category_601"
+  },
+  {
+    "name": "Shadow Howl",
+    "sound": "scary_1",
+    "icon": "ic_category_701"
+  },
+  {
+    "name": "mosquito",
+    "sound": "animal_sound1",
+    "icon": "ic_category_81"
+  },
+  {
+    "name": "Clay Crush",
+    "sound": "pottery_break_1",
+    "icon": "ic_category_901"
+  },
+  {
+    "name": "Turbo Dry",
+    "sound": "dryer_1",
+    "icon": "ic_category_1001"
+  },
+  {
+    "name": "Volt Power",
+    "sound": "electricity_1",
+    "icon": "ic_category_1101"
+  },
+  {
+    "name": "Toothy Tuner",
+    "sound": "fart_sound_1",
+    "icon": "ic_category_1201"
+  },
+  {
+    "name": "Specter",
+    "sound": "ghost_1",
+    "icon": "ic_category_1301"
+  },
+  {
+    "name": "toilet 1",
+    "sound": "toilet_1",
+    "icon": "ic_category_1401"
+  }
+]

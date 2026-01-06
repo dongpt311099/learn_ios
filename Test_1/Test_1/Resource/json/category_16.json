@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Cockroaches",
+    "sound": "bug_1",
+    "icon": "ic_category_161"
+  },
+  {
+    "name": "Caterpillar",
+    "sound": "bug_4",
+    "icon": "ic_category_162"
+  },
+  {
+    "name": "Spider",
+    "sound": "bug_2",
+    "icon": "ic_category_163"
+  },
+  {
+    "name": "Fly",
+    "sound": "bug_3",
+    "icon": "ic_category_164"
+  }
+]

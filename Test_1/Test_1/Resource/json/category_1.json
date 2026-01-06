@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Swift Clip",
+    "sound": "hair_trimmer_1",
+    "icon": "ic_category_101"
+  },
+  {
+    "name": "Edge Master",
+    "sound": "hair_trimmer_2",
+    "icon": "ic_category_102"
+  },
+  {
+    "name": "Silk Touch",
+    "sound": "hair_trimmer_3",
+    "icon": "ic_category_103"
+  },
+  {
+    "name": "Razor Pro",
+    "sound": "hair_trimmer_4",
+    "icon": "ic_category_104"
+  },
+  {
+    "name": "Buzz Elite",
+    "sound": "hair_trimmer_5",
+    "icon": "ic_category_105"
+  },
+  {
+    "name": "Sleek Cut",
+    "sound": "hair_trimmer_6",
+    "icon": "ic_category_106"
+  },
+  {
+    "name": "Finesse Trim",
+    "sound": "hair_trimmer_7",
+    "icon": "ic_category_107"
+  },
+  {
+    "name": "Glide Tech",
+    "sound": "hair_trimmer_8",
+    "icon": "ic_category_108"
+  }
+]
