@@ -9,14 +9,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let vc = UIHostingController(rootView: ContentView())
+        let vc = UIHostingController(rootView: SettingView())
         self.window?.rootViewController = vc
         if #available(iOS 13.0, *) {
             self.window?.overrideUserInterfaceStyle = .light
         }
         
         self.window?.makeKeyAndVisible()
-        
+        print(UIFont.familyNames.sorted())
         return true
     }
 }

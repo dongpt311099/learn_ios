@@ -1,0 +1,149 @@
+import SwiftUI
+
+struct SettingView: View {
+    
+    @State var selectVibrate = false
+    
+    var body: some View {
+        ZStack {
+            Image("bg").resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack(spacing: 0) {
+                HStack {
+                    Button(action: {
+                        
+                    }) {
+                        Image("ic_back")
+                                    .resizable()
+                                    .padding(12)
+                                    .frame(width: 56, height: 56)
+                            }
+                    Spacer()
+                    Text("Setting")
+                        .font(.custom("Digitalt", size: 24))
+                        .foregroundColor(.white)
+                    Spacer()
+                    Spacer().frame(width: 56, height: 56)
+                }
+                Spacer().frame(height: 16)
+                ZStack {
+                    HStack {
+                        Image("ic_vibrate")
+                                    .resizable()
+                                    
+                                    .frame(width: 24, height: 24)
+                        Spacer().frame(width: 16)
+                        Text("Vibrate")
+                            .font(.custom("Digitalt", size: 16))
+                            .foregroundColor(Color(hex: "#A75CF4"))
+                        Spacer()
+                        Toggle("", isOn: $selectVibrate).tint(Color(hex: "#C286FF")).onChange(of: selectVibrate) { newValue in
+                            
+                        }
+                    }.frame(height: 66)
+                }
+                .padding([.leading, .trailing], 16).background(){
+                    ZStack {
+                        Color.black.opacity(0.25).cornerRadius(20)
+                        Color(hex: "#D1D8FF").cornerRadius(20).padding(.bottom, 2)
+                        Color.white.cornerRadius(20).padding(.bottom, 4)
+                    }
+                }.padding([.leading, .trailing], 16)
+                
+                VStack(spacing: 4) {
+                    Button(action: {
+                        
+                    }) {
+                        HStack(spacing: 16) {
+                            Image("ic_feedback")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                            Text("Feedback")
+                                .font(.custom("Digitalt", size: 16))
+                                .foregroundColor(Color(hex: "#A75CF4"))
+                            Spacer()
+                            Image("ic_arrow")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                        }.frame(height: 40)
+                    }
+                    Button(action: {
+                        
+                    }) {
+                        HStack(spacing: 16) {
+                            Image("ic_share_app")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                            Text("Share app")
+                                .font(.custom("Digitalt", size: 16))
+                                .foregroundColor(Color(hex: "#A75CF4"))
+                            Spacer()
+                            Image("ic_arrow")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                        }.frame(height: 40)
+                    }
+                    
+                    Button(action: {
+                        
+                    }) {
+                        HStack(spacing: 16) {
+                            Image("ic_rate_app")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                            Text("Rate app")
+                                .font(.custom("Digitalt", size: 16))
+                                .foregroundColor(Color(hex: "#A75CF4"))
+                            Spacer()
+                            Image("ic_arrow")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                        }.frame(height: 40)
+                    }
+                    
+                    Button(action: {
+                        
+                    }) {
+                        HStack(spacing: 16) {
+                            Image("ic_policy")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                            Text("Policy")
+                                .font(.custom("Digitalt", size: 16))
+                                .foregroundColor(Color(hex: "#A75CF4"))
+                            Spacer()
+                            Image("ic_arrow")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                        }.frame(height: 40)
+                    }
+                }.padding(16)
+                .background(
+                    ZStack {
+                        Color.black.opacity(0.25).cornerRadius(20)
+                        Color(hex: "#D1D8FF").cornerRadius(20).padding(.bottom, 4)
+                        Color.white.cornerRadius(20).padding(.bottom, 8)
+                    }
+                )
+                .padding(16)
+                Spacer()
+            }.padding(.top, safeAreaTop)
+            .edgesIgnoringSafeArea(.top)
+        }
+    }
+    
+    private var safeAreaTop: CGFloat {
+        let keyWindow = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first { $0.isKeyWindow }
+            
+        return keyWindow?.safeAreaInsets.top ?? 0
+    }
+}
+
+#Preview {
+    SettingView()
+}
