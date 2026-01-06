@@ -13,10 +13,20 @@ struct ContentView: View {
                         .foregroundColor(.blue)
                     
                     VStack(alignment: .leading) {
-                        Text (User)
+                        Text(user.name).font(.headline)
+                        Text(user.job).font(.subheadline).foregroundColor(.gray)
                     }
                 }
             }
+            .navigationTitle("Team Mobie")
+            .onAppear {
+                viewModel.fetchUsers()
+            }
         }
+    }
+}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }

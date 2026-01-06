@@ -47,22 +47,16 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		23A54F3F2F0CB5A300141767 /* Test_1 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = Test_1;
 			sourceTree = "<group>";
 		};
 		23A54F502F0CB5A500141767 /* Test_1Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = Test_1Tests;
 			sourceTree = "<group>";
 		};
 		23A54F5A2F0CB5A500141767 /* Test_1UITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = Test_1UITests;
 			sourceTree = "<group>";
 		};
@@ -128,7 +122,6 @@
 				1B531F582F2746B5E52624D2 /* Pods-Test_1Tests.debug.xcconfig */,
 				81A5A44B2B7311D6D3F0260A /* Pods-Test_1Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
