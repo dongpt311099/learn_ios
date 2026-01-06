@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeHeaderView" id="U6b-Vx-4bR" customClass="HomeHeaderView" customModule="TestIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSd-G6-4gz">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Users" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htn-UP-ibq">
+                            <rect key="frame" x="16" y="0.0" width="45" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBj-kY-ezf">
+                            <rect key="frame" x="262" y="0.0" width="42" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="tableCellBlueTextColor"/>
+                    <constraints>
+                        <constraint firstItem="EBj-kY-ezf" firstAttribute="top" secondItem="MSd-G6-4gz" secondAttribute="top" id="0lz-JG-zHR"/>
+                        <constraint firstAttribute="bottom" secondItem="EBj-kY-ezf" secondAttribute="bottom" id="BbJ-CT-JPN"/>
+                        <constraint firstAttribute="trailing" secondItem="EBj-kY-ezf" secondAttribute="trailing" constant="16" id="J6K-mp-dgA"/>
+                        <constraint firstItem="Htn-UP-ibq" firstAttribute="top" secondItem="MSd-G6-4gz" secondAttribute="top" id="TBK-Zf-dWs"/>
+                        <constraint firstAttribute="bottom" secondItem="Htn-UP-ibq" secondAttribute="bottom" id="dLo-ID-vxl"/>
+                        <constraint firstItem="Htn-UP-ibq" firstAttribute="leading" secondItem="MSd-G6-4gz" secondAttribute="leading" constant="16" id="hSj-nd-1TQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="MSd-G6-4gz" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Dwp-8x-ies"/>
+                <constraint firstItem="MSd-G6-4gz" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Fdi-qD-CVN"/>
+                <constraint firstAttribute="bottom" secondItem="MSd-G6-4gz" secondAttribute="bottom" id="ZXi-CW-O5w"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="MSd-G6-4gz" secondAttribute="trailing" id="ksY-p4-8KL"/>
+            </constraints>
+            <connections>
+                <outlet property="lbNumber" destination="EBj-kY-ezf" id="oau-jJ-g19"/>
+                <outlet property="lbUser" destination="Htn-UP-ibq" id="1E4-FQ-HI2"/>
+            </connections>
+            <point key="canvasLocation" x="37" y="-12"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="tableCellBlueTextColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
