@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SettingView: View {
     
-    @State var selectVibrate = false
+    @StateObject private var viewModel = SettingViewModel()
     
     var body: some View {
         ZStack {
@@ -39,8 +39,8 @@ struct SettingView: View {
                             .font(.custom("Digitalt", size: 16))
                             .foregroundColor(Color(hex: "#A75CF4"))
                         Spacer()
-                        Toggle("", isOn: $selectVibrate).tint(Color(hex: "#C286FF")).onChange(of: selectVibrate) { newValue in
-                            
+                        Toggle("", isOn: $viewModel.selectVibrate).tint(Color(hex: "#C286FF")).onChange(of: viewModel.selectVibrate) { newValue in
+                            viewModel.selectVibrate = newValue
                         }
                     }.frame(height: 66)
                 }
@@ -51,74 +51,11 @@ struct SettingView: View {
                         Color.white.cornerRadius(20).padding(.bottom, 4)
                     }
                 }.padding([.leading, .trailing], 16)
-                
-                VStack(spacing: 4) {
-                    Button(action: {
-                        
-                    }) {
-                        HStack(spacing: 16) {
-                            Image("ic_feedback")
-                                        .resizable()
-                                        .frame(width: 24, height: 24)
-                            Text("Feedback")
-                                .font(.custom("Digitalt", size: 16))
-                                .foregroundColor(Color(hex: "#A75CF4"))
-                            Spacer()
-                            Image("ic_arrow")
-                                        .resizable()
-                                        .frame(width: 24, height: 24)
-                        }.frame(height: 40)
-                    }
-                    Button(action: {
-                        
-                    }) {
-                        HStack(spacing: 16) {
-                            Image("ic_share_app")
-                                        .resizable()
-                                        .frame(width: 24, height: 24)
-                            Text("Share app")
-                                .font(.custom("Digitalt", size: 16))
-                                .foregroundColor(Color(hex: "#A75CF4"))
-                            Spacer()
-                            Image("ic_arrow")
-                                        .resizable()
-                                        .frame(width: 24, height: 24)
-                        }.frame(height: 40)
-                    }
-                    
-                    Button(action: {
-                        
-                    }) {
-                        HStack(spacing: 16) {
-                            Image("ic_rate_app")
-                                        .resizable()
-                                        .frame(width: 24, height: 24)
-                            Text("Rate app")
-                                .font(.custom("Digitalt", size: 16))
-                                .foregroundColor(Color(hex: "#A75CF4"))
-                            Spacer()
-                            Image("ic_arrow")
-                                        .resizable()
-                                        .frame(width: 24, height: 24)
-                        }.frame(height: 40)
-                    }
-                    
-                    Button(action: {
-                        
-                    }) {
-                        HStack(spacing: 16) {
-                            Image("ic_policy")
-                                        .resizable()
-                                        .frame(width: 24, height: 24)
-                            Text("Policy")
-                                .font(.custom("Digitalt", size: 16))
-                                .foregroundColor(Color(hex: "#A75CF4"))
-                            Spacer()
-                            Image("ic_arrow")
-                                        .resizable()
-                                        .frame(width: 24, height: 24)
-                        }.frame(height: 40)
-                    }
+                VStack(spacing: 0) {
+                    SettingRow(icon: "ic_feedback", title: "Feedback", action: viewModel.feedback)
+                    SettingRow(icon: "ic_share_app", title: "Share app", action: viewModel.shareApp)
+                    SettingRow(icon: "ic_rate_app", title: "Rate app", action: viewModel.rateApp)
+                    SettingRow(icon: "ic_policy", title: "Policy", action: viewModel.openPolicy)
                 }.padding(16)
                 .background(
                     ZStack {
@@ -141,6 +78,29 @@ struct SettingView: View {
             .first { $0.isKeyWindow }
             
         return keyWindow?.safeAreaInsets.top ?? 0
+    }
+}
+
+struct SettingRow: View {
+    let icon: String
+    let title: String
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 16) {
+                Image(icon)
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                Text(title)
+                    .font(.custom("Digitalt", size: 16))
+                    .foregroundColor(Color(hex: "#A75CF4"))
+                Spacer()
+                Image("ic_arrow")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+            }.frame(height: 48)
+        }
     }
 }
 

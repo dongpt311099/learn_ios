@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         self.window?.makeKeyAndVisible()
-        print(UIFont.familyNames.sorted())
         return true
     }
 }
