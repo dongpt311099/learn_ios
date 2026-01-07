@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingView: View {
     
     @StateObject private var viewModel = SettingViewModel()
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         ZStack {
@@ -13,13 +14,13 @@ struct SettingView: View {
             VStack(spacing: 0) {
                 HStack {
                     Button(action: {
-                        
+                        dismiss()
                     }) {
                         Image("ic_back")
-                                    .resizable()
-                                    .padding(12)
-                                    .frame(width: 56, height: 56)
-                            }
+                            .resizable()
+                            .padding(12)
+                            .frame(width: 56, height: 56)
+                        }
                     Spacer()
                     Text("Setting")
                         .font(.custom("Digitalt", size: 24))
@@ -68,6 +69,7 @@ struct SettingView: View {
                 Spacer()
             }.padding(.top, safeAreaTop)
             .edgesIgnoringSafeArea(.top)
+            .navigationBarHidden(true)
         }
     }
     

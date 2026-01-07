@@ -5,8 +5,8 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     
     let columns = [
-        GridItem(.flexible(), spacing: 16),
-        GridItem(.flexible(), spacing: 16)
+        GridItem(.flexible(), spacing: 24),
+        GridItem(.flexible(), spacing: 24)
     ]
     
     var body: some View {
@@ -20,10 +20,12 @@ struct HomeView: View {
                     
                     VStack {
                         HStack {
-                            Image("ic_setting")
-                                .resizable()
-                                .frame(width: 24, height: 24)
-                            
+                            NavigationLink(destination: SettingView()){
+                                Image("ic_setting")
+                                    .resizable()
+                                    .frame(width: 24, height: 24)
+                            }
+                        
                             Spacer()
                             
                             Text("funny prank sounds" .uppercased())
@@ -49,13 +51,13 @@ struct HomeView: View {
                             .layoutPriority(1)
                         
                         ScrollView(.vertical, showsIndicators: false) {
-                            LazyVGrid(columns: columns, spacing: 12) {
+                            LazyVGrid(columns: columns, spacing: 24) {
                                 ForEach(viewModel.listCategory) { category in
                                     NavigationLink(destination: ListPrankView(category: category)) {
                                         ZStack {
                                             Image("bg_item")
                                                 .resizable()
-                                                .frame(height: 150)
+                                                .scaledToFill()
                                             
                                             VStack {
                                                 Image("ic_category")
@@ -63,26 +65,29 @@ struct HomeView: View {
                                                     .scaledToFit()
                                                     .frame(height: 70)
                                                 
+                                                Spacer()
+                                                
                                                 ZStack {
                                                     Image("bg_btn_home")
                                                         .resizable()
-                                                        .scaledToFill()
-                                                    
+                                                        .scaledToFit()
                                                     Text(category.name.uppercased())
                                                         .foregroundColor(.white)
                                                         .font(.custom("Digitalt", size: 18))
                                                         .lineLimit(1)
                                                 }
-                                                
                                             }
                                             .padding()
                                         }
+                                        .aspectRatio(1, contentMode: .fit)
+                                        .cornerRadius(12)
+                                        .clipped()
                                     }
                                     .buttonStyle(.plain)
                                 }
                             }
                             .padding(.horizontal, 16)
-                            .padding(.vertical, 13)
+                            .padding(.vertical, 15)
                         }
                     }
                 }
