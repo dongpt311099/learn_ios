@@ -1,12 +1,12 @@
 import SwiftUI
 
-struct Splash: View {
+struct SplashView: View {
     
     @State var isActive = false
     
     var body: some View {
         if isActive {
-            Home()
+            HomeView()
         } else {
             ZStack {
                 Image("bg")
@@ -41,5 +41,5 @@ struct Splash: View {
 }
 
 #Preview {
-    Splash()
+    SplashView()
 }

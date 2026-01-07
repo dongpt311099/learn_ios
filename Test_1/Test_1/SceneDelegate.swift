@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene =  windowScene
         
-        let vc = UIHostingController(rootView: Splash())
+        let vc = UIHostingController(rootView: SplashView())
         self.window!.rootViewController = vc
         self.window!.makeKeyAndVisible()
     }

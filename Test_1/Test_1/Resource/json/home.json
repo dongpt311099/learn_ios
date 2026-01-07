@@ -1,17 +1,5 @@
 [
   {
-    "id": "18",
-    "name": "trending_title",
-    "icon_title": "ic_category_title_4",
-    "icon": "ic_category_18"
-  },
-  {
-    "id": "17",
-    "name": "meme",
-    "icon_title": "ic_category_title_17",
-    "icon": "ic_category_17"
-  },
-  {
     "id": "1",
     "name": "hair_clipper_cate",
     "icon_title": "ic_category_title_1",
@@ -22,18 +10,6 @@
     "name": "air_horn_cate",
     "icon_title": "ic_category_title_2",
     "icon": "ic_category_2"
-  },
-  {
-    "id": "15",
-    "name": "crack_screen",
-    "icon_title": "ic_category_title_15",
-    "icon": "ic_category_15"
-  },
-  {
-    "id": "16",
-    "name": "bug_camera",
-    "icon_title": "ic_category_title_16",
-    "icon": "ic_category_16"
   },
   {
     "id": "3",
@@ -106,5 +82,29 @@
     "name": "toilet",
     "icon_title": "ic_category_title_14",
     "icon": "ic_category_14"
+  },
+  {
+    "id": "15",
+    "name": "crack_screen",
+    "icon_title": "ic_category_title_15",
+    "icon": "ic_category_15"
+  },
+  {
+    "id": "16",
+    "name": "bug_camera",
+    "icon_title": "ic_category_title_16",
+    "icon": "ic_category_16"
+  },
+  {
+    "id": "17",
+    "name": "meme",
+    "icon_title": "ic_category_title_17",
+    "icon": "ic_category_17"
+  },
+  {
+    "id": "18",
+    "name": "trending_title",
+    "icon_title": "ic_category_title_4",
+    "icon": "ic_category_18"
   }
 ]
