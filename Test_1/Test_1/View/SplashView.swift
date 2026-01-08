@@ -2,39 +2,31 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State var isActive = false
-    
     var body: some View {
-        if isActive {
-            HomeView()
-        } else {
-            ZStack {
-                Image("bg")
+        ZStack {
+            Image("bg")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Image("text_splash")
                     .resizable()
-                    .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity)
+                    .padding(.top, 117)
                 
-                VStack {
-                    Image("text_splash")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: .infinity)
-                        .padding(.top, 117)
-                    
-                    Spacer()
-                    
-                    Text("loading ......" .uppercased())
-                        .foregroundColor(.textSplash)
-                        .font(.custom("Digitalt", size: 16))
-                        .padding(.bottom, 118)
-                }
+                Spacer()
+                
+                Text("loading ......" .uppercased())
+                    .foregroundColor(.textSplash)
+                    .font(.custom("Digitalt", size: 16))
+                    .padding(.bottom, 118)
             }
-            .onAppear(){
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    withAnimation {
-                        self.isActive = true
-                    }
-                }
+        }
+        .onAppear(){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                UIApplication.shared.setRootView(HomeView())
             }
         }
     }
