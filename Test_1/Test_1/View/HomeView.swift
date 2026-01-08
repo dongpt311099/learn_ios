@@ -16,8 +16,7 @@ struct HomeView: View {
                     Image("background_home")
                         .resizable()
                         .scaledToFill()
-                        .edgesIgnoringSafeArea(.all)
-                    
+                        .ignoresSafeArea(.all)
                     VStack {
                         HStack {
                             NavigationLink(destination: SettingView()){
@@ -25,7 +24,7 @@ struct HomeView: View {
                                     .resizable()
                                     .frame(width: 24, height: 24)
                             }
-                        
+                            
                             Spacer()
                             
                             Text("funny prank sounds" .uppercased())
@@ -89,8 +88,23 @@ struct HomeView: View {
                             .padding(.horizontal, 16)
                             .padding(.vertical, 15)
                         }
+                        
+                        VStack {
+                            Text("BANNER ADS")
+                                .frame(height: 50) // Chiều cao cố định của Banner
+                                .frame(maxWidth: .infinity)
+                                .background(Color.white)
+                        }
+                        // MẤU CHỐT NẰM Ở ĐÂY:
+                        // 1. Tô màu trắng cho cả cái khung chứa
+                        // 2. Cho phép cái MÀU TRẮNG NÀY (chỉ màu thôi nhé) tràn xuống đáy
+                        .background(
+                            Color.white.ignoresSafeArea(edges: .bottom)
+                        )
                     }
+                    
                 }
+                
                 .navigationBarHidden(true)
                 .onAppear {
                     viewModel.getCategories()

@@ -34,7 +34,7 @@ struct ListPrankView: View {
                             
                             Text(category.name.uppercased())
                                 .foregroundColor(.white)
-                                .font(.custom("Agbalumo", size: 22))
+                                .font(.custom("Digitalt", size: 22))
                                 .lineLimit(1)
                                 .layoutPriority(1)
                             
@@ -92,6 +92,8 @@ struct ListPrankView: View {
                     viewModel.getSounds(categoryId: category.id)
                 }
             }
+        } else {
+            
         }
     }
 }

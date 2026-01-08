@@ -28,3 +28,26 @@ extension Color {
         )
     }
 }
+
+extension UIApplication {
+    func setRootView<V: View>(_ view: V) {
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = .push
+        transition.subtype = .fromRight
+        transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        
+        guard let window = SceneDelegate.shared?.window else { return }
+        window.layer.add(transition, forKey: kCATransition)
+        window.rootViewController = UIHostingController(rootView: view)
+        window.makeKeyAndVisible()
+    }
+
+    static var safeAreaInsets: UIEdgeInsets {
+        let keyWindow = shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first { $0.isKeyWindow }
+        return keyWindow?.safeAreaInsets ?? .zero
+    }
+}
