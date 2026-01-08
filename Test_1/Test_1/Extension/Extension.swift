@@ -28,3 +28,39 @@ extension Color {
         )
     }
 }
+
+extension UIApplication {
+    func setRootView<V: View>(_ view: V) {
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = .push
+        transition.subtype = .fromRight
+        transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        
+        guard let window = SceneDelegate.shared?.window else { return }
+        window.layer.add(transition, forKey: kCATransition)
+        window.rootViewController = UIHostingController(rootView: view)
+        window.makeKeyAndVisible()
+    }
+}
+
+struct NavigationStackCompat<Content: View>: View {
+    let content: Content
+    
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
+    }
+    
+    var body: some View {
+        if #available(iOS 16.0, *) {
+            NavigationStack {
+                content
+            }
+        } else {
+            NavigationView {
+                content
+            }
+            .navigationViewStyle(.stack)
+        }
+    }
+}
