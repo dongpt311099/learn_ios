@@ -3,7 +3,7 @@ import UIKit
 import SwiftUI
 
 class ListViewModel: ObservableObject {
-    @Published var listSound = [Sound]()
+    @Published var 	listSound = [Sound]()
     
     func getSounds(categoryId: String) {
         guard let url = Bundle.main.url(forResource: "category_\(categoryId)", withExtension: "json") else {
