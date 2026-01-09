@@ -152,26 +152,21 @@ struct DetailView: View {
         }
     }
     
-    // MARK: - Vibration Functions
     private func startContinuousVibration() {
-        // Stop any existing timer first
         stopContinuousVibration()
         
         isLongPressing = true
         
-        // Trigger first vibration immediately
         let impactFeedback = UIImpactFeedbackGenerator(style: .heavy)
         impactFeedback.prepare()
         impactFeedback.impactOccurred()
         
-        // Start timer for continuous vibration
         let timer = Timer(timeInterval: 0.3, repeats: true) { _ in
             let feedback = UIImpactFeedbackGenerator(style: .heavy)
             feedback.prepare()
             feedback.impactOccurred()
         }
         
-        // Add timer to RunLoop to ensure it keeps running
         RunLoop.current.add(timer, forMode: .common)
         vibrationTimer = timer
     }
