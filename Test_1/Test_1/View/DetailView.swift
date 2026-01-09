@@ -1,4 +1,5 @@
 import SwiftUI
+import AVFoundation
 
 struct DetailView: View {
     
@@ -7,6 +8,7 @@ struct DetailView: View {
     @Environment(\.dismiss) var dismiss
     @State private var isLongPressing = false
     @State private var vibrationTimer: Timer?
+    @State private var audioPlayer: AVAudioPlayer?
     
     let sound: Sound
     
@@ -96,12 +98,14 @@ struct DetailView: View {
                                         if !isLongPressing {
                                             print("Started pressing")
                                             isLongPressing = true
+                                            playSound()
                                             startContinuousVibration()
                                         }
                                     }
                                     .onEnded { _ in
                                         print("Released")
                                         stopContinuousVibration()
+                                        stopSound()
                                     }
                             )
                             .animation(.easeInOut(duration: 0.2), value: isLongPressing)
@@ -175,6 +179,40 @@ struct DetailView: View {
         isLongPressing = false
         vibrationTimer?.invalidate()
         vibrationTimer = nil
+    }
+    
+    private func playSound() {
+        guard let soundPath = Bundle.main.path(forResource: sound.sound, ofType: "mp3") else {
+            // Try with .wav extension if .mp3 not found
+            guard let wavPath = Bundle.main.path(forResource: sound.sound, ofType: "wav") else {
+                print("Sound file not found: \(sound.sound)")
+                return
+            }
+            
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: wavPath))
+                audioPlayer?.numberOfLoops = viewModel.selectLoop ? -1 : 0
+                audioPlayer?.prepareToPlay()
+                audioPlayer?.play()
+            } catch {
+                print("Error playing sound: \(error.localizedDescription)")
+            }
+            return
+        }
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundPath))
+            audioPlayer?.numberOfLoops = viewModel.selectLoop ? -1 : 0
+            audioPlayer?.prepareToPlay()
+            audioPlayer?.play()
+        } catch {
+            print("Error playing sound: \(error.localizedDescription)")
+        }
+    }
+    
+    private func stopSound() {
+        audioPlayer?.stop()
+        audioPlayer = nil
     }
 }
 

@@ -3,11 +3,13 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject private var viewModel = HomeViewModel()
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
     
-    let columns = [
-        GridItem(.flexible(), spacing: 24),
-        GridItem(.flexible(), spacing: 24)
-    ]
+    var columns: [GridItem] {
+        let columnCount = isIPad ? 3 : 2
+        return Array(repeating: GridItem(.flexible(), spacing: gridSpacing), count: columnCount)
+    }
     
     var body: some View {
         if #available(iOS 16.0, *) {
@@ -22,14 +24,14 @@ struct HomeView: View {
                             NavigationLink(destination: SettingView()){
                                 Image("ic_setting")
                                     .resizable()
-                                    .frame(width: 24, height: 24)
+                                    .frame(width: iconSize, height: iconSize)
                             }
                             
                             Spacer()
                             
                             Text("funny prank sounds" .uppercased())
                                 .foregroundColor(.white)
-                                .font(.custom("Digitalt", size: 22))
+                                .font(.custom("Digitalt", size: titleFontSize))
                                 .lineLimit(1)
                                 .layoutPriority(1)
                             
@@ -37,20 +39,20 @@ struct HomeView: View {
                             
                             Image("ic_heart")
                                 .resizable()
-                                .frame(width: 24, height: 24)
+                                .frame(width: iconSize, height: iconSize)
                         }
-                        .padding(.top, 50)
-                        .padding(.horizontal, 16)
+                        .padding(.top, topPadding)
+                        .padding(.horizontal, horizontalPadding)
                         
                         Text("Prank with our hilarious and realistic sounds.")
                             .foregroundColor(.white)
-                            .font(.custom("Poppins", size: 12))
+                            .font(.custom("Poppins", size: subtitleFontSize))
                             .padding(.top, 12)
                             .lineLimit(1)
                             .layoutPriority(1)
                         
                         ScrollView(.vertical, showsIndicators: false) {
-                            LazyVGrid(columns: columns, spacing: 24) {
+                            LazyVGrid(columns: columns, spacing: gridSpacing) {
                                 ForEach(viewModel.listCategory) { category in
                                     NavigationLink(destination: ListPrankView(category: category)) {
                                         ZStack {
@@ -62,7 +64,7 @@ struct HomeView: View {
                                                 Image("ic_category")
                                                     .resizable()
                                                     .scaledToFit()
-                                                    .frame(height: 70)
+                                                    .frame(height: categoryIconSize)
                                                 
                                                 Spacer()
                                                 
@@ -72,7 +74,7 @@ struct HomeView: View {
                                                         .scaledToFit()
                                                     Text(category.name.uppercased())
                                                         .foregroundColor(.white)
-                                                        .font(.custom("Digitalt", size: 18))
+                                                        .font(.custom("Digitalt", size: categoryFontSize))
                                                         .lineLimit(1)
                                                 }
                                             }
@@ -85,19 +87,16 @@ struct HomeView: View {
                                     .buttonStyle(.plain)
                                 }
                             }
-                            .padding(.horizontal, 16)
+                            .padding(.horizontal, horizontalPadding)
                             .padding(.vertical, 15)
                         }
                         
                         VStack {
                             Text("BANNER ADS")
-                                .frame(height: 50) // Chiều cao cố định của Banner
+                                .frame(height: 50)
                                 .frame(maxWidth: .infinity)
                                 .background(Color.white)
                         }
-                        // MẤU CHỐT NẰM Ở ĐÂY:
-                        // 1. Tô màu trắng cho cả cái khung chứa
-                        // 2. Cho phép cái MÀU TRẮNG NÀY (chỉ màu thôi nhé) tràn xuống đáy
                         .background(
                             Color.white.ignoresSafeArea(edges: .bottom)
                         )
@@ -113,6 +112,42 @@ struct HomeView: View {
         } else {
             // Fallback on earlier versions
         }
+    }
+    
+    private var isIPad: Bool {
+        horizontalSizeClass == .regular && verticalSizeClass == .regular
+    }
+    
+    private var titleFontSize: CGFloat {
+        isIPad ? 28 : 22
+    }
+    
+    private var subtitleFontSize: CGFloat {
+        isIPad ? 16 : 12
+    }
+    
+    private var categoryFontSize: CGFloat {
+        isIPad ? 20 : 18
+    }
+    
+    private var iconSize: CGFloat {
+        isIPad ? 32 : 24
+    }
+    
+    private var categoryIconSize: CGFloat {
+        isIPad ? 90 : 70
+    }
+    
+    private var topPadding: CGFloat {
+        isIPad ? 60 : 50
+    }
+    
+    private var horizontalPadding: CGFloat {
+        isIPad ? 32 : 16
+    }
+    
+    private var gridSpacing: CGFloat {
+        isIPad ? 32 : 24
     }
 }
 
