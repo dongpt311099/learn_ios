@@ -50,36 +50,69 @@ struct ListPrankView: View {
                         ScrollView(.vertical, showsIndicators: false) {
                             LazyVGrid(columns: columns, spacing: 24) {
                                 ForEach(viewModel.listSound) { sound in
-                                    NavigationLink(destination: DetailView(sound: sound)) {
-                                        ZStack {
-                                            Image("bg_list_item")
-                                                .resizable()
-                                                .scaledToFill()
-                                                .frame(height: 118)
-                                        
-                                            VStack {
-                                                Text(sound.name.uppercased())
-                                                    .foregroundColor(.white)
-                                                    .font(.custom("Digitalt", size: 13))
-                                                    .lineLimit(1)
-                                                    .padding(.top, 10)
-                                                
-                                                Spacer()
-                                                
-                                                Image("ic_category")
+                                    if sound.sound.contains("crack_screen") {
+                                        NavigationLink(destination: DetailScreenView(sound: sound)) {
+                                            ZStack {
+                                                Image("bg_list_item")
                                                     .resizable()
-                                                    .scaledToFit()
-                                                    .frame(height: 70)
-                                                    .padding(.top, 13)
-                                                
-                                                Spacer()
+                                                    .scaledToFill()
+                                                    .frame(height: 118)
+                                            
+                                                VStack {
+                                                    Text(sound.name.uppercased())
+                                                        .foregroundColor(.white)
+                                                        .font(.custom("Digitalt", size: 13))
+                                                        .lineLimit(1)
+                                                        .padding(.top, 10)
+                                                    
+                                                    Spacer()
+                                                    
+                                                    Image("ic_category")
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .frame(height: 70)
+                                                        .padding(.top, 13)
+                                                    
+                                                    Spacer()
+                                                }
                                             }
+                                            .aspectRatio(1, contentMode: .fit)
+                                            .cornerRadius(12)
+                                            .clipped()
                                         }
-                                        .aspectRatio(1, contentMode: .fit)
-                                        .cornerRadius(12)
-                                        .clipped()
+                                        .buttonStyle(.plain)
+                                    } else {
+                                        NavigationLink(destination: DetailView(sound: sound)) {
+                                            ZStack {
+                                                Image("bg_list_item")
+                                                    .resizable()
+                                                    .scaledToFill()
+                                                    .frame(height: 118)
+                                            
+                                                VStack {
+                                                    Text(sound.name.uppercased())
+                                                        .foregroundColor(.white)
+                                                        .font(.custom("Digitalt", size: 13))
+                                                        .lineLimit(1)
+                                                        .padding(.top, 10)
+                                                    
+                                                    Spacer()
+                                                    
+                                                    Image("ic_category")
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .frame(height: 70)
+                                                        .padding(.top, 13)
+                                                    
+                                                    Spacer()
+                                                }
+                                            }
+                                            .aspectRatio(1, contentMode: .fit)
+                                            .cornerRadius(12)
+                                            .clipped()
+                                        }
+                                        .buttonStyle(.plain)
                                     }
-                                    .buttonStyle(.plain)
                                 }
                             }
                             .padding(.horizontal, 38)
