@@ -51,3 +51,38 @@ extension UIApplication {
         return keyWindow?.safeAreaInsets ?? .zero
     }
 }
+
+extension Dictionary {
+    func stringFromHttpParameters() -> String {
+        let parameterArray = self.map { (key, value) -> String in
+            let percentEscapedKey = (key as! String).addingPercentEncodingForURLQueryValue()!
+            var percentEscapedValue: String = "\(value)"
+            if value is String {
+                percentEscapedValue = (value as! String).addingPercentEncodingForURLQueryValue()!
+            }
+            return "\(percentEscapedKey)=\(percentEscapedValue)"
+        }
+        
+        return parameterArray.joined(separator: "&")
+    }
+    
+}
+
+extension String {
+    func addingPercentEncodingForURLQueryValue() -> String? {
+        let allowedCharacters = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._~")
+        
+        return self.addingPercentEncoding(withAllowedCharacters: allowedCharacters)
+    }
+    
+    var condensedWhitespace: String {
+        let components = self.components(separatedBy: NSCharacterSet.whitespacesAndNewlines)
+        return components.filter { !$0.isEmpty }.joined(separator: " ")
+    }
+
+    func removeSpecialCharacters() -> String {
+        let specialCharacters =  CharacterSet(charactersIn: "[-^/,'*:.!><~@#$%+=?|\"\\()]+.")
+        return self.components(separatedBy: specialCharacters).joined(separator: " ")
+    }
+    
+}
