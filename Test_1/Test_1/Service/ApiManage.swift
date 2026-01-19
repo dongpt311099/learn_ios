@@ -9,6 +9,9 @@ enum HttpMethod: String {
 
 // MARK: - Configuration
 
+typealias FlixDictionary = [String: Any]
+typealias ApiCompletion = (_ data: Response) -> ()
+
 struct ApiConfig {
     static var timeout: TimeInterval = 30
     static var maxRetries: Int = 3

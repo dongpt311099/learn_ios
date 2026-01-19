@@ -18,5 +18,24 @@ class HomeViewModel: ObservableObject {
         } catch {
             print("Error loading home.json: \(error)")
         }
+        
+        ApiManage.shared.getDataHome { data in
+            if data.success {
+                let templates = (data.data as? HomeData)?.templates ?? []
+                
+                var categoriesName:[String] = [String]()
+                
+                for item in templates {
+                    let listCategory = item.category.components(separatedBy: ";")
+                    for category in listCategory {
+                        if categoriesName.filter({$0 == category}).isEmpty {
+                            categoriesName.append(category)
+                        }
+                    }
+                }
+                
+            }
+        }
+        
     }
 }

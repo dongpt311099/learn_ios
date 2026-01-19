@@ -12,6 +12,7 @@ extension ApiManage {
                 completion(res)
             } else {
                 if let data = response.data as? FlixDictionary {
+
                     if data["data"] != nil {
                         let homeData = HomeData()
                         let allData = data["data"] as! FlixDictionary
@@ -48,6 +49,7 @@ extension ApiManage {
                         let res = Response(error: data["message"] as? String ?? "")
                         completion(res)
                     }
+                    
 
                 } else {
                     let res = Response(error: "")
